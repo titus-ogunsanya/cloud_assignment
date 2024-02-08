@@ -25,7 +25,7 @@ ____
 
 1. Create a tar archive called misc.tar for the contents of misc directory `tar -cvf misc.tar misc`
 
-1. gCompress the tar archive to create a misc.tar.gz file `gzip misc.tar`
+1. Compress the tar archive to create a misc.tar.gz file `gzip misc.tar`
 
 1. Create a user and force the user to change his/her password upon login `a user was created with useradd -m -s /usr/bin/bash 'username' and set the default password of the user with sudo chage -d 0 'username'`
 
