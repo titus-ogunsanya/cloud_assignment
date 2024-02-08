@@ -13,7 +13,7 @@
 ____
 1. Change directory to the tests directory using absolute pathname `cd /home/altsch/tests`
 
-1. Change directory to the tests directory using relative pathname `./tests`
+1. Change directory to the tests directory using relative pathname `cd ./tests`
 
 1. Use echo command to create a file named fileA with text content ‘Hello A’ in the misc directory `echo "Hello A" > /home/altsch/misc/fileA or echo "Hello A"> ./misc/fileA`
 
