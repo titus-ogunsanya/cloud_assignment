@@ -53,14 +53,28 @@ cp /home/altsch/misc/fileA /home/altsch/misc/fileC
 tar -cvf misc.tar misc
 ```
 
-2. Compress the tar archive to create a misc.tar.gz file `gzip misc.tar`
+1. Compress the tar archive to create a misc.tar.gz file 
+   
+```bash   
+gzip misc.tar
+```
 
-3.  Create a user and force the user to change his/her password upon login `a user was created with useradd -m -s /usr/bin/bash 'username' and set the default password of the user with sudo chage -d 0 'username'`
+1. Create a user and force the user to change his/her password upon login 
 
-4.  Lock a users password `sudo passwd -l 'username'`
+a user was created with `useradd -m -s /usr/bin/bash 'username'` and set the default password of the user with `sudo chage -d 0 'username'`
 
-5.  Create a user with no login shell `sudo useradd -s /usr/sbin/nologin 'username'`
+1.  Lock a users password 
 
-6.  Disable password based authentication for ssh `change to root with cd /; cd /etc; find sshd_config file(copy the file before you continue if neccesary); in the file, after disable tunneled clear text password...uncomment PasswordAuthentication no`
+```bash
+sudo passwd -l 'username'
+```
 
-7.  Disable root login for ssh `in the same sshd_config, after permit RootLogin prohibit password, write PermitRootLogin no`
+1.  Create a user with no login shell 
+
+```bash 
+sudo useradd -s /usr/sbin/nologin 'username'
+```
+
+1.  Disable password based authentication for ssh `change to root with cd /; cd /etc; find sshd_config file(copy the file before you continue if neccesary); in the file, after disable tunneled clear text password...uncomment PasswordAuthentication no`
+
+1.  Disable root login for ssh `in the same sshd_config, after permit RootLogin prohibit password, write PermitRootLogin no`
